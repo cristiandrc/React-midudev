@@ -9,11 +9,13 @@ module.exports = {
       template: "./src/index.html",
     }),
   ],
-
+  resolve: {
+    extensions: [".js", ".jsx"],
+  },
   module: {
     rules: [
       {
-        test: /\.js$/,
+        test: /\.(js|jsx)$/,
         exclude: /node_modules/,
         use: {
           loader: "babel-loader",
