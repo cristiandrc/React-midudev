@@ -2,11 +2,11 @@ import React from "react";
 import { Anchor, Image } from "./styles";
 
 const DEFAULT_IMAGE =
-    "https://i.imgur.com/dJa0Hpl_d.webp?maxwidth=760&fidelity=grand";
+  "https://i.imgur.com/dJa0Hpl_d.webp?maxwidth=760&fidelity=grand";
 
 export const Category = ({ cover = DEFAULT_IMAGE, path, emoji = "?" }) => (
-    <Anchor href={path}>
-        <Image src={cover} alt="" />
-        {emoji}
-    </Anchor>
+  <Anchor href={path}>
+    <Image src={cover} alt="" />
+    {emoji}
+  </Anchor>
 );
