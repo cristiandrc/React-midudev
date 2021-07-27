@@ -1,12 +1,10 @@
 import React from "react"
 import { PhotoCard } from "../PhotoCard"
-import { photos } from "../../../api/db.json"
 
-console.log(photos)
 export const ListOfPhotoCards = () => (
   <ul>
-    {photos.map((photo) => (
-      <PhotoCard key={photo.id} {...photo} />
+    {new Array(10).fill(1).map((a, i) => (
+      <PhotoCard key={i} id={i} />
     ))}
   </ul>
 )
