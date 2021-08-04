@@ -1,5 +1,5 @@
-import React, { Fragment, useEffect, useRef, useState } from "react"
-import { Img, ImgWrapper, Button, Article } from "./styles"
+import React, { Fragment } from "react"
+import { Img, ImgWrapper, Article } from "./styles"
 import { MdFavoriteBorder, MdFavorite } from "react-icons/md"
 import { useLocalStorage } from "../../hooks/useLocalStorage"
 import { useNearScreen } from "../../hooks/useNearScreen"
