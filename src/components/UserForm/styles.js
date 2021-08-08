@@ -30,6 +30,3 @@ export const Title = styled.h2`
   padding: 8px 0;
   margin-left: 5%;
 `
-export const P = styled.p`
-  margin-left: 5%;
-`
