@@ -9,9 +9,7 @@ import { Fav } from "./pages/Fav"
 import { User } from "./pages/User"
 import { NotRegisteredUser } from "./pages/NotRegisteredUser"
 
-const UserLogged = ({ children }) => {
-  return children({ isAuth: true })
-}
+import Context from "./Context"
 
 const App = () => {
   // const urlParams = new window.URLSearchParams(window.location.search) // filtro del Search "/?detail=0"
@@ -26,7 +24,7 @@ const App = () => {
         <Home path="/pet/:id" />
         <Detail path="/detail/:detailId" />
       </Router>
-      <UserLogged>
+      <Context.Consumer>
         {({ isAuth }) =>
           isAuth ? (
             <Router>
@@ -40,7 +38,7 @@ const App = () => {
             </Router>
           )
         }
-      </UserLogged>
+      </Context.Consumer>
       <NavBar />
     </>
   )
