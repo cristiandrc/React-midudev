@@ -1,6 +1,7 @@
 import React from "react"
 import { useGetFavorites } from "../hooks/useGetFavorites"
 import { ListOfFavs } from "../components/ListOfFavs"
+import { Layout } from "../components/Layout"
 
 export const Fav = () => {
   const { data, loading, error } = useGetFavorites()
@@ -12,6 +13,11 @@ export const Fav = () => {
     return <h2>Loading...</h2>
   }
   return (
-    <>{data.favs ? <ListOfFavs {...data} /> : <h1>No tienes Favoritos</h1>}</>
+    <Layout
+      title="Tus Favoritos"
+      subtitle="Aqui puedes encontrar tus favoritos"
+    >
+      {data.favs ? <ListOfFavs {...data} /> : <h1>No tienes Favoritos</h1>}
+    </Layout>
   )
 }
