@@ -5,10 +5,11 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "webpack",
+    "build": "webpack --mode development",
     "dev": "webpack server --mode development",
     "lint": "standard",
-    "vercel-build": "npm run build"
+    "vercel-build": "npm run build",
+    "serve:dev": "webpack --mode 'development' && npx serve dist -s"
   },
   "repository": {
     "type": "git",

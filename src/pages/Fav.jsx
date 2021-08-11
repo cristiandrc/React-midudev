@@ -3,7 +3,7 @@ import { useGetFavorites } from "../hooks/useGetFavorites"
 import { ListOfFavs } from "../components/ListOfFavs"
 import { Layout } from "../components/Layout"
 
-export const Fav = () => {
+const Fav = () => {
   const { data, loading, error } = useGetFavorites()
   if (error) {
     return <p>Error en los favoritos</p>
@@ -21,3 +21,5 @@ export const Fav = () => {
     </Layout>
   )
 }
+
+export default Fav

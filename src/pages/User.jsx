@@ -16,7 +16,7 @@ const Button = styled.button`
   }
 `
 
-export const User = () => {
+const User = () => {
   const { removeAuth } = useContext(Context)
   return (
     <>
@@ -25,3 +25,5 @@ export const User = () => {
     </>
   )
 }
+
+export default User
