@@ -12,5 +12,21 @@
     <noscript>
       <h3>Esta app necesita JS para funcionar</h3>
     </noscript>
+    <script>
+      if ("serviceWorker" in navigator) {
+        window.addEventListener("load", function () {
+          navigator.serviceWorker
+            .register("/service-worker.js")
+            .then((registration) => {
+              console.log("SW registrado", registration)
+            })
+            .catch((registerError) => {
+              console.log("SW Error", registerError)
+            })
+        })
+      } else {
+        console.log("servis Worker no es soportado")
+      }
+    </script>
   </body>
 </html>
